@@ -85,9 +85,13 @@ h1 {
 	padding: 10px;
 }
 
-/*hr {
-
-}*/
+hr {
+	margin: 0 10px;
+    background-color: black;
+    color: black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #7a7a7a;
+}
 
 .article {
 	color: #fff;
