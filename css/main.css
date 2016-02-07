@@ -1,3 +1,8 @@
+@font-face {
+font-family: HelveticaLT;
+src: url("/../Helvetica Inserat LT.ttf") format('truetype'),
+}
+
 html, body, div, span, applet, object, iframe,
 h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,6 +22,10 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+body{
+	font-family: HelveticaLT;
 }
 
 #container{
@@ -46,22 +55,56 @@ ul {
 	list-style-type: none;
 }
 
-.links_horizontal_nav li{
+.links_horizontal_nav > li{
 	float: left;
 }
 
-.links_horizontal_nav li a{
+.links_horizontal_nav > li > a{
 	color: #fff;
     text-decoration: none;
+    text-align: left;
     margin: 2px;
-    background-color: black;
+    background-color: #515151;
     padding: 10px 20px;
 }
 
-/*.lng{
-	display: inline-block;
-	border: 1px solid #909090;
-}*/
+.dd_menu {
+    position: absolute;
+    background-color: #000;
+    margin: 9px 2px;
+    width: 140px;
+}
+
+.dd_menu > a {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font: 11px arial;
+}
+
+a + hr{
+	margin: 0 10px;
+	background-color: #818181;
+	border-top: 1px solid #818181;
+	border-bottom: 1px solid #818181;
+}
+
+.dd_menu > a:hover{
+	color: #900000;
+}
+
+.show {
+	visibility: visible;
+}
+
+.hide {
+	visibility: hidden;
+}
 
 span.flag{
 	display: inline-block;
@@ -73,10 +116,9 @@ a.lng:hover{
 }
 
 #main{
-	width: 66%;
+	width: 65%;
 	float: left;
 	margin-top: 10px;
-	/*height: 800px;*/
 }
 
 h1 {
@@ -85,7 +127,7 @@ h1 {
 	padding: 10px;
 }
 
-hr {
+h1 + hr {
 	margin: 0 10px;
     background-color: black;
     color: black;
@@ -104,7 +146,78 @@ hr {
 	float: right;
 	margin-top: 10px;
 	padding: 10px;
-	/*height: 800px;*/
+}
+
+.accordion > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.dropdown a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  color: white;
+  background: #000;
+  -moz-box-shadow: 0 1px 0 #7a7a7a inset, 0 -1px 0 #7a7a7a inset;
+  -webkit-box-shadow: 0 1px 0 #7a7a7a inset, 0 -1px 0 #7a7a7a inset;
+  box-shadow: 0 1px 0 #7a7a7a inset, 0 -1px 0 #7a7a7a inset;
+  padding: 10px;
+}
+
+.dropdown a:hover {
+  color: #900000;
+}
+.dropdown .icon-arrow {
+  position: absolute;
+  display: block;
+  font-size: 0.7em;
+  color: #fff;
+  top: 14px;
+  right: 10px;
+}
+
+.dropdown .icon-arrow.open {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.dropdown .icon-arrow.close {
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.dropdown .icon-arrow:before {
+  content: '\25BC';
+}
+
+.dropdown .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown .show, .dropdown .hide {
+  -moz-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+.dropdown .show {
+  display: block;
+  max-height: 9999px;
+  padding: 10px;
+}
+.dropdown .hide {
+  max-height: 0;
 }
 
 #section, #accordion_container{
